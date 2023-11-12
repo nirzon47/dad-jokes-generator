@@ -13,19 +13,24 @@
 		<script src="script.js" defer></script>
 	</head>
 	<body class="w-screen h-screen grid place-content-center">
-		<div class="text-center">
-			<h1 class="text-3xl font-bold h-24">Dad Jokes Generator</h1>
-			<span
-				class="loading loading-ball loading-lg opacity-0 duration-300"
+		<div class="flex flex-col justify-center items-center">
+			<h1 class="text-3xl font-bold h-16">Dad Jokes Generator</h1>
+
+			<section
 				id="loading"
-			></span>
+				class="opacity-0 h-32 duration-300 flex flex-col items-center justify-center"
+			>
+				<span class="loading loading-ball loading-lg mb-2"></span>
+				<p
+					id="loading-text"
+					class="font-medium text-lg max-w-lg text-center"
+				></p>
+			</section>
+
 			<p
 				id="joke"
-				class="text-xl font-semibold h-36 max-w-lg animate-fade-right animate-duration-500"
-			>
-				<span class="animate-fade-right animate-duration-500 animate-delay-300">
-				</span>
-			</p>
+				class="text-xl font-semibold h-36 max-w-lg duration-300 text-center"
+			></p>
 			<button class="btn btn-primary mx-auto" id="joke-button">Get Joke</button>
 		</div>
 	</body>
