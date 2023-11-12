@@ -3,6 +3,7 @@ const joke = document.getElementById('joke')
 const loading = document.getElementById('loading')
 const jokeButton = document.getElementById('joke-button')
 const loadingText = document.getElementById('loading-text')
+const copy = document.getElementById('copy')
 
 let fetchedJoke
 const loadingArray = [
@@ -25,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 jokeButton.addEventListener('click', () => {
 	fetchJoke()
+})
+
+copy.addEventListener('click', () => {
+	copyText()
 })
 
 // Functions
@@ -59,4 +64,8 @@ const fetchJoke = async () => {
 
 const renderJoke = () => {
 	joke.textContent = fetchedJoke
+}
+
+const copyText = () => {
+	navigator.clipboard.writeText(joke.textContent)
 }

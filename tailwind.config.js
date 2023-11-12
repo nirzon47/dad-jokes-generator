@@ -2,7 +2,14 @@
 export default {
 	content: ['*.html'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				comic: ['Comic Sans MS', 'Comic Sans', 'cursive'],
+			},
+			backgroundImage: {
+				custom: 'url("../assets/bg.webp")',
+			},
+		},
 	},
 	daisyui: {
 		themes: [

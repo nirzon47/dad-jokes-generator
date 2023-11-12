@@ -11,27 +11,40 @@
 		<!-- Script -->
 		<script src="api-key.js" defer></script>
 		<script src="script.js" defer></script>
+
+		<!-- Fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/d521bbec8a.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
-	<body class="w-screen h-screen grid place-content-center">
-		<div class="flex flex-col justify-center items-center">
-			<h1 class="text-3xl font-bold h-16">Dad Jokes Generator</h1>
+	<body
+		class="w-screen h-screen grid place-content-center font-comic bg-cover bg-custom text-center"
+	>
+		<div
+			class="flex flex-col justify-center items-center bg-base-100 p-6 md:p-12 rounded-xl"
+		>
+			<h1 class="text-3xl font-bold h-16 font-sans">Dad Jokes Generator</h1>
 
 			<section
 				id="loading"
 				class="opacity-0 h-32 duration-300 flex flex-col items-center justify-center"
 			>
 				<span class="loading loading-ball loading-lg mb-2"></span>
-				<p
-					id="loading-text"
-					class="font-medium text-lg max-w-lg text-center"
-				></p>
+				<p id="loading-text" class="font-medium text-lg max-w-lg"></p>
 			</section>
 
-			<p
-				id="joke"
-				class="text-xl font-semibold h-36 max-w-lg duration-300 text-center"
-			></p>
-			<button class="btn btn-primary mx-auto" id="joke-button">Get Joke</button>
+			<p id="joke" class="text-xl font-semibold h-36 max-w-lg duration-300"></p>
+			<section class="flex gap-4">
+				<button class="btn btn-primary mx-auto" id="joke-button">
+					Get Joke
+				</button>
+				<div class="tooltip" data-tip="Copy">
+					<button class="btn btn-secondary" id="copy">
+						<i class="fa-solid fa-share-nodes fa-xl"></i>
+					</button>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>
