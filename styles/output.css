@@ -1007,24 +1007,6 @@ html {
   max-width: 32rem;
 }
 
-@keyframes jump-in {
-  0% {
-    transform: scale(0%);
-  }
-
-  80% {
-    transform: scale(120%);
-  }
-
-  100% {
-    transform: scale(100%);
-  }
-}
-
-.animate-jump-in {
-  animation: jump-in .5s both;
-}
-
 @keyframes fade-right {
   0% {
     opacity: 0;
@@ -1069,6 +1051,14 @@ html {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.animate-delay-\[50ms\] {
+  animation-delay: 50ms;
 }
 
 .animate-duration-500 {
