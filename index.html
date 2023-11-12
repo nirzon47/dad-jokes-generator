@@ -17,26 +17,41 @@
 			src="https://kit.fontawesome.com/d521bbec8a.js"
 			crossorigin="anonymous"
 		></script>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+		<!-- Meta tags -->
+		<meta
+			name="description"
+			content="Dad joke app that generates random dad jokes. Share your favorite with your friends with a single click."
+		/>
+		<meta
+			name="keywords"
+			content=" Javascript, vanilla javascript, tailwindcss, daisyui, html, css, dad jokes generator, random dad jokes, dad jokes, dad joke,"
+		/>
+		<meta name="author" content="Nirzon Taru Karmakar" />
+		<meta name="robots" content="index, follow" />
 	</head>
 	<body
-		class="w-screen h-screen grid place-content-center font-comic bg-cover bg-custom text-center"
+		class="grid w-screen h-screen text-center bg-cover place-content-center font-comic bg-custom"
 	>
 		<div
-			class="flex flex-col justify-center items-center bg-base-100 p-6 md:p-12 rounded-xl"
+			class="flex flex-col items-center justify-center p-6 bg-base-100 md:p-12 rounded-xl"
 		>
-			<h1 class="text-3xl font-bold h-16 font-sans">Dad Jokes Generator</h1>
+			<h1 class="h-16 font-sans text-3xl font-bold">Dad Jokes Generator</h1>
 
 			<section
 				id="loading"
-				class="opacity-0 h-32 duration-300 flex flex-col items-center justify-center"
+				class="flex flex-col items-center justify-center h-32 duration-300 opacity-0"
 			>
-				<span class="loading loading-ball loading-lg mb-2"></span>
-				<p id="loading-text" class="font-medium text-lg max-w-lg"></p>
+				<span class="mb-2 loading loading-ball loading-lg"></span>
+				<p id="loading-text" class="max-w-lg text-lg font-medium"></p>
 			</section>
 
-			<p id="joke" class="text-xl font-semibold h-36 max-w-lg duration-300"></p>
+			<p id="joke" class="max-w-lg text-xl font-semibold duration-300 h-36"></p>
 			<section class="flex gap-4">
-				<button class="btn btn-primary mx-auto" id="joke-button">
+				<button class="mx-auto btn btn-primary" id="joke-button">
 					Get Joke
 				</button>
 				<div class="tooltip" data-tip="Copy">
