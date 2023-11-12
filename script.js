@@ -41,13 +41,18 @@ const fetchJoke = async () => {
 
 const renderJoke = () => {
 	const span = document.createElement('span')
+
+	joke.innerHTML = ''
+	joke.appendChild(span)
+
 	span.classList.add(
 		'animate-fade-right',
 		'animate-duration-500',
-		'animate-delay-100'
+		'animate-pause',
+		'animate-delay-300'
 	)
 
 	span.textContent = fetchedJoke
-	joke.innerHTML = ''
-	joke.appendChild(span)
+
+	span.classList.remove('animate-pause')
 }
