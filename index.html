@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dad Jokes Generator</title>
+
+		<!-- Tailwind -->
+		<link rel="stylesheet" href="styles/output.css" />
+	</head>
+	<body class="w-screen h-screen grid place-content-center">
+		<div class="text-center">
+			<h1 class="text-3xl font-bold h-24">Dad Jokes Generator</h1>
+			<span class="loading loading-ball loading-lg opacity-0"></span>
+			<p
+				id="joke"
+				class="text-xl font-semibold h-36 max-w-lg animate-fade-right animate-duration-500"
+			></p>
+			<button class="btn btn-primary mx-auto">Get Joke</button>
+		</div>
+	</body>
+</html>
