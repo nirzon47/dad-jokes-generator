@@ -5,7 +5,8 @@ const jokeButton = document.getElementById('joke-button')
 const loadingText = document.getElementById('loading-text')
 const copy = document.getElementById('copy')
 
-let fetchedJoke
+// Variables
+let fetchedJoke // Globally storing the fetched joke
 const loadingArray = [
 	'Unpacking dad jokes... Handle with extreme laughter!',
 	'Gathering puns and dad wisdom... Brace yourself!',
@@ -17,7 +18,7 @@ const loadingArray = [
 	"Downloading dad jokes... Your patience is appreciated, unlike a dad's dance moves.",
 	'Generating dad-approved humor... Please stand by for dad-level wit.',
 	"Preparing a fresh batch of dad jokes... Don't worry, it's not as long as a dad's grocery list.",
-]
+] // Array of loading texts
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,6 +42,11 @@ const options = {
 	},
 }
 
+/**
+ * Fetches a joke from the API and renders it on the page.
+ *
+ * @return {Promise<void>} This function does not return anything.
+ */
 const fetchJoke = async () => {
 	loading.style.opacity = 1
 	jokeButton.disabled = true
@@ -62,10 +68,22 @@ const fetchJoke = async () => {
 		})
 }
 
+/**
+ * Renders the fetched joke on the webpage.
+ *
+ * @param {string} fetchedJoke - The joke to be rendered.
+ * @return {void} This function does not return any value.
+ */
 const renderJoke = () => {
 	joke.textContent = fetchedJoke
 }
 
+/**
+ * Copies the text content of the joke element to the clipboard.
+ *
+ * @param {none}
+ * @return {none}
+ */
 const copyText = () => {
 	navigator.clipboard.writeText(joke.textContent)
 }
